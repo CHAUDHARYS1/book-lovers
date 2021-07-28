@@ -25,7 +25,8 @@ THEN I am again presented with the same search results
 
 ### API
 - Google Books API
-- ? Still deciding
+- ? Still deciding :  https://www.goodreads.com/api/index ? returns reviews for books searched, user can select based on reviews from followers 
+- (OR) https://www.programmableweb.com/api/open-library-search-rest-api
 
 ### CSS Framework
 - Ulkit link: https://getuikit.com
