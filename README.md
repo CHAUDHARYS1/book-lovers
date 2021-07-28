@@ -8,22 +8,33 @@ AS A student,
 I **WANT** to search for a book by the title, subject or author 
 SO **THAT** I can view the books and check if they're available on Amazon.
 
-### Features
-- [ ] ?? Still deciding
-- [ ] ?? Still deciding
-- [ ] ?? Still deciding
-- [ ] ?? Still deciding
+### Acceptance Criteria
+GIVEN a book dashboard with form inputs
+WHEN I load the page
+THEN I am presented with the UI that resembles with the mockup
+WHEN I search for a book
+THEN I am presented with series of search results
+WHEN I view a search card
+THEN I am presented with the book title, cover, author, ISBN and published year and a link to view your book in Google/Amazon.
+WHEN I click on the Google/Amazon link
+THEN I am presented with the book in Google/Amazon in a new tab
+WHEN I search for a book 
+THEN the book is saved in the search history
+WHEN I click on the book in search history 
+THEN I am again presented with the same search results
+
 
 ### API
 - Google Books API
 - ? Still deciding
 
 ### CSS Framework
-- ? Still deciding
+- Ulkit link: https://getuikit.com
 
 ### Built with
 - HTML
 - CSS 
+- Ulkit
 - JavaScript 
 - Server-side API
 
