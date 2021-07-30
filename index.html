@@ -12,25 +12,24 @@
 </head>
 
 <body>
-    <header id="homeBar1">
+    <header class="uk-container">
         <!-- Icon Button link to home page -->
-        <nav id="iconBtnDiv1">
-            <h3 id="iconHead1">
-                <button id="iconBtn1">Book Lovers</button>
-            </h3>
-        </nav>
+        <div id="logo">
+            <img src="assets/images/logo.png" alt="Logo" srcset="">
+        </div>
+        <br>
         <!-- Search Bar -->
-        <nav id="searchBarDiv1">
-            <input id="searchBar1" type="Search your favorite books here...">
-            <button id="searchBtn1">Search</button>
-        </nav>
+        <form id="searchBarDiv1">
+            <fieldset class="uk-fieldset">
+                <div class="uk-margin">
+                    <input class="uk-input" id="search-bar" type="text"
+                        placeholder="Search your favorite books here...">
+                    <button class="uk-button uk-button-default" id="search-btn" type="submit">Search</button>
+
+                </div>
+            </fieldset>
+        </form>
     </header>
-
-    <!-- <section id="results">
-        This is a place holder for all the fun books that will apear in this area ooooh ahhhh!!
-    </section> -->
-
-    <button id="backBtn1">Back</button>
     <!-- UIkit JS -->
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.7.1/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.7.1/dist/js/uikit-icons.min.js"></script>
