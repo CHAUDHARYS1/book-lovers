@@ -5,12 +5,25 @@
 header {
   margin-top: 50px;
 }
-#logo {
+p {
+  font-size: 16px;
 }
+/* 
+#logo {
+} */
 
 #search-bar {
-  width: 70%;
+  width: 40%;
 }
 #search-btn {
   position: absolute;
+}
+/* #book-title {
+} */
+#author-name {
+  color: #707070;
+  margin-top: -20px;
+}
+#book-descripton {
+  margin-top: -20px;
 }

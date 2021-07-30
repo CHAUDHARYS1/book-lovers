@@ -24,12 +24,34 @@
                 <div class="uk-margin">
                     <input class="uk-input" id="search-bar" type="text"
                         placeholder="Search your favorite books here...">
-                    <button class="uk-button uk-button-default" id="search-btn" type="submit">Search</button>
-
+                    <button class="uk-button uk-button-default" id="search-btn" type="submit">
+                        Search <span class="uk-margin-small-right" uk-icon="search"></span>
+                    </button>
                 </div>
             </fieldset>
         </form>
     </header>
+    <!-- List of books based on keyword searched -->
+    <!-- commented out section, will need to generate dynamically w/ js 
+    <main class="uk-container uk-margin-medium-top">
+        <div uk-grid>
+            <div class="uk-width-auto">
+                <img src="assets/images/thumbnail.png" alt="">
+            </div>
+            <div class="uk-width-expand@m">
+                <h4 id="book-title">Title of the book</h4>
+                <p id="author-name">Author name</p>
+                <p><b>Description:</b></p>
+                <p id="book-descripton">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates non quam ad
+                    repudiandae ducimus optio, reprehenderit inventore eligendi dolores? Animi blanditiis similique
+                    harum obcaecati totam iure, molestiae distinctio! Nostrum, ipsa!</p>
+                <a href="#">Learn more</a>
+            </div>
+
+        </div>
+        <hr>
+    </main>
+    -->
     <!-- UIkit JS -->
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.7.1/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.7.1/dist/js/uikit-icons.min.js"></script>
