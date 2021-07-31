@@ -5,12 +5,13 @@
 header {
   margin-top: 50px;
 }
-p {
-  font-size: 14px;
+p, a{
+  font-size: 12px;
 }
-/* 
-#logo {
-} */
+
+a{
+  color: black!important;
+}
 
 #search-bar {
   width: 40%;
@@ -18,12 +19,15 @@ p {
 #search-btn {
   position: absolute;
 }
-/* #book-title {
-} */
-#author-name {
-  color: #707070;
-  margin-top: -20px;
-}
-#book-descripton {
-  margin-top: -20px;
-}
+
+
+/* ui Kit force css */
+h1,h2, h3, h4, h5, h6{
+  font-weight:300!important;
+  }
+  h1,h2, h3, h4, h5, h6, p, a{
+    color: #666!important;
+  }
+.uk-card-default .uk-card-header {
+  border-bottom: 1px solid transparent!important;
+  }

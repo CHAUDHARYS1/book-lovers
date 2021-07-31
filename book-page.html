@@ -15,7 +15,7 @@
     <header class="uk-container">
         <!-- Icon Button link to home page -->
         <div id="logo">
-            <img src="assets/images/logo.png" alt="Logo" srcset="">
+           <a href="index.html"> <img src="assets/images/logo.png" alt="Logo" srcset=""></a>
         </div>
         <br>
         <!-- Search Bar -->
@@ -32,44 +32,54 @@
         </form>
     </header>
     <!-- Display Selected Book Information -->
-    <section class="uk-container">
+    <section class="uk-container uk-margin-medium-top">
         <div uk-grid>
             <!-- Cover photo of book -->
-            <div class="uk-width-auto@m">
-                <img src="assets/images/thumbnail.png"  alt="">
+            <div class="uk-width-1-4@m">
+                <img src="assets/images/big-thumbnail.png" alt="Cover Page of Photo">
+                <p class="uk-margin-remove-bottom">ISBN#<span id="isbn-number"></span></p>
+                <p class="uk-margin-remove-top">Dimensions<span id="dimensions"></span></p>
             </div>
             <!-- Book Information -->
             <div class="uk-width-1-3@m">
-                <h2 id="book-title">Title of the book</h2>
-                <p id="author-name">Author name</p>
-                <p>Description:</p>
-                <p id="book-descripton">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates non quam ad
+                <h2 id="book-title" class="uk-margin-remove-bottom">Title of the book</h2>
+                <p id="author-name" class="uk-margin-remove-top">Author name</p>
+                <p class="uk-margin-remove-bottom"><b>Description:</b></p>
+                <p id="book-descripton" class="uk-margin-remove-top description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates non quam ad
                     repudiandae ducimus optio, reprehenderit inventore eligendi dolores? Animi blanditiis similique
                     harum obcaecati totam iure, molestiae distinctio! Nostrum, ipsa!</p>
                 <p>Published: <span id="publish-year">1995</span></p>
                 <a href="#"><u>Link to view book in Google/Amazon</u></a>
             </div>
             <!-- Displayed Latest Reviews -->
-            <div class="uk-width-expand@m">
+            <div class="uk-card uk-width-1-3@m">
                 <h2>Reviews</h2>
-
-                <div class="uk-card uk-card-body uk-card-default">
-                    <h3 class="uk-card-title">John Doe</h3>
-                    <p id="review">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-                        tincidunt ipsum a imperdiet pellentesque. Sed odio odio, feugiat a
-                        molestie a, vehicula non tellus. Fusce ante dui, venenatis quis nibh in,
-                        convallis fringilla metus. Praesent non velit ut ante accumsan imperdiet
-                        id eget odio. Curabitur felis eros, tincidunt nec metus in, tincidunt
-                        mattis sapien. Nunc laoreet ipsum scelerisque ligula mollis, eget
-                        pellentesque neque pellentesque. Phasellus a velit sodales, aliquam sem
-                        eget, placerat dui. Vestibulum ante ipsum primis in faucibus orci luctus
-                        et ultrices posuere cubilia curae; Pellentesque condimentum pharetra
-                        viverra. Vestibulum tincidunt ultrices libero, eget laoreet tellus
-                        lacinia a. Donec sed dui leo.
-                    </p>
+               
+                <!-- Will need to generate all this content below from js dynamically w/ a for loop. -->
+                <div class="uk-card-small uk-card-default uk-margin">
+                    <div class="uk-card-header">
+                        <div class="uk-grid-small uk-flex-middle uk-grid-divider" uk-grid>
+                            <div class="uk-width-auto">
+                                <img class="uk-border-circle" width="40" height="40" src="assets/images/logo.png">
+                            </div>
+                            <div class="uk-width-expand">
+                                <h3 class="uk-card-title uk-margin-remove-bottom">Title</h3>
+                                <p class="uk-text-meta uk-margin-remove-top">
+                                    <span>
+                                        July 30,
+                                        2021
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-card-body">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates non quam ad
+                            repudiandae ducimus optio, reprehenderit inventore eligendi dolores? Animi blanditiis similique
+                            harum obcaecati totam iure, molestiae distinctio! Nostrum, ipsa!</p>
+                    </div>
                 </div>
-                
+        
             </div>
         </div>
     </section>
