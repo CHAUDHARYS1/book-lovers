@@ -16,8 +16,9 @@ var displaySearchResults = function(data) {
     console.log("title, author, thumbnail, description")
 }
 
-$("#searchBtn1").on("click", function () {
-    var searchInput = document.getElementById("searchBar1").value;
+$("#search-btn").on("click", function (e) {
+    console.log("here")
+    var searchInput = document.getElementById("search-bar").value;
     if(searchInput === "") {
 
     }
