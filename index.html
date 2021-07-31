@@ -12,25 +12,46 @@
 </head>
 
 <body>
-    <header id="homeBar1">
+    <header class="uk-container">
         <!-- Icon Button link to home page -->
-        <nav id="iconBtnDiv1">
-            <h3 id="iconHead1">
-                <button id="iconBtn1">Book Lovers</button>
-            </h3>
-        </nav>
+        <div id="logo">
+            <img src="assets/images/logo.png" alt="Logo" srcset="">
+        </div>
+        <br>
         <!-- Search Bar -->
-        <nav id="searchBarDiv1">
-            <input id="searchBar1" type="text" placeholder="Serach your favourite book here">
-            <button id="searchBtn1">Search</button>
-        </nav>
+        <form id="searchBarDiv1">
+            <fieldset class="uk-fieldset">
+                <div class="uk-margin">
+                    <input class="uk-input" id="search-bar" type="text"
+                        placeholder="Search your favorite books here...">
+                    <button class="uk-button uk-button-default" id="search-btn" type="submit">
+                        Search <span class="uk-margin-small-right" uk-icon="search"></span>
+                    </button>
+                </div>
+            </fieldset>
+        </form>
     </header>
+    <!-- List of books based on keyword searched -->
+    <!-- commented out section, will need to generate dynamically w/ js    
+    <main class="uk-container uk-margin-medium-top">
+        <div uk-grid>
+            <div class="uk-width-auto">
+                <img src="assets/images/thumbnail.png" alt="">
+            </div>
+            <div class="uk-width-expand@m">
+                <h4 id="book-title" class="uk-margin-remove-bottom">Title of the book</h4>
+                <p id="author-name" class="uk-margin-remove-top">Author name</p>
+                <p class="uk-margin-remove-bottom"><b>Description:</b></p>
+                <p id="book-descripton" class="uk-margin-remove-top">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates non quam ad
+                    repudiandae ducimus optio, reprehenderit inventore eligendi dolores? Animi blanditiis similique
+                    harum obcaecati totam iure, molestiae distinctio! Nostrum, ipsa!</p>
+                <a href="#">Learn more</a>
+            </div>
 
-    <!-- <section id="results">
-        This is a place holder for all the fun books that will apear in this area ooooh ahhhh!!
-    </section> -->
-
-    <button id="backBtn1">Back</button>
+        </div>
+        <hr>
+    </main>
+ -->
     <!-- UIkit JS -->
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.7.1/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.7.1/dist/js/uikit-icons.min.js"></script>
