@@ -70,7 +70,7 @@ var displaySearchResults = function (data) {
     var getDescription = book.volumeInfo.description;
     var descriptionEl = document.createElement("p");
     descriptionEl.id = "book-description";
-    descriptionEl.classList = "uk-margin-remove-top";
+    descriptionEl.classList = "uk-margin-remove-top ch-limit-100";
     descriptionEl.innerHTML = getDescription;
 
     // <a> for Learn more inside of book div
