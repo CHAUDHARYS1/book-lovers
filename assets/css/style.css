@@ -60,3 +60,10 @@ h1,h2, h3, h4, h5, h6{
     opacity: 0.8;
     padding: 10px;
   }
+.ch-limit-100 {
+  width: 200ch;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+}
