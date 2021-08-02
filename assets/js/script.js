@@ -13,13 +13,6 @@ var fetchBooks = function (searchInput) {
     });
 };
 
-$("#search-btn").on("click", function (e) {
-  var searchInput = document.getElementById("search-bar").value;
-  if (searchInput !== "") {
-    fetchBooks(searchInput);
-  }
-});
-
 // function to populate search results page in main-container
 var displaySearchResults = function (data) {
   var mainContainer = document.querySelector("#main-container");
@@ -104,11 +97,22 @@ var displaySearchResults = function (data) {
   }
 };
 
-/* Capture key board event for ENTER and call Search City function */
+// fetch books when the user clicks on the search button
+$("#search-btn").on("click", function (e) {
+    var searchInput = document.getElementById("search-bar").value;
+    if (searchInput !== "") {
+      fetchBooks(searchInput);
+    }
+  });
+
+/* fetch books when the user pressed enter in the search bar */
 document.getElementById("search-bar").onkeypress = function (e) {
     if (!e) e = window.event;
     if (e.key === "Enter") {
-        fetchBooks();
+        var searchInput = document.getElementById("search-bar").value;
+        if (searchInput !== "") {
+            fetchBooks(searchInput);
+        }
       return false;
     }
   };
