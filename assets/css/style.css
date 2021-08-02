@@ -2,9 +2,18 @@
   padding: 0;
   margin: 0;
 }
-header {
-  margin-top: 50px;
+
+body {
+  background-image: url("../images/bg-4.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 1000px;
+  background-repeat: no-repeat;
 }
+
+/* header {
+  margin-top: 50px;
+} */
 p, a{
   font-size: 12px;
 }
@@ -18,8 +27,10 @@ a{
 }
 #search-btn {
   position: absolute;
+  background-color: #ec3b50 ;
+  color: white;
+  font-weight: bold;
 }
-
 
 /* ui Kit force css */
 h1,h2, h3, h4, h5, h6{
@@ -30,4 +41,21 @@ h1,h2, h3, h4, h5, h6{
   }
 .uk-card-default .uk-card-header {
   border-bottom: 1px solid transparent!important;
+  }
+
+  .individual-book-container {
+    background-color: white;
+    opacity: 0.8;
+    padding: 10px;
+  }
+
+  #search-bar {
+    color: #ec3b50;
+  }
+
+  .book-info-container {
+    background-color: black;
+    color: white;
+    opacity: 0.8;
+    padding: 10px;
   }
