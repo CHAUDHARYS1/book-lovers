@@ -62,8 +62,9 @@ h1,h2, h3, h4, h5, h6{
   }
 .ch-limit-100 {
   width: 200ch;
-  white-space: nowrap;
   overflow: hidden;
+  white-space: nowrap;
   text-overflow: ellipsis;
-
+  word-wrap: break-word;
+  max-width: 85%;
 }
