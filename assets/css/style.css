@@ -30,6 +30,7 @@ a{
   background-color: #ec3b50 ;
   color: white;
   font-weight: bold;
+  margin-left: 20px;
 }
 
 /* ui Kit force css */
@@ -54,8 +55,8 @@ h1,h2, h3, h4, h5, h6{
   }
 
   .book-info-container {
-    background-color: black;
-    color: white;
+    background-color:  black;
+    color: black;
     opacity: 0.8;
     padding: 10px;
   }
