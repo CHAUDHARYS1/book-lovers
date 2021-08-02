@@ -23,19 +23,17 @@ $("#search-btn").on("click", function (e) {
 // function to populate search results page in main-container
 var displaySearchResults = function (data) {
   var mainContainer = document.querySelector("#main-container");
+  mainContainer.innerHTML = " ";
   var pageLimt = 10;
   for (var index = 0; index < pageLimt; index++) {
     var book = data.items[index];
 
-    console.log("book ", book);
-
     var individualBookContainerDivEl = document.createElement("div");
     individualBookContainerDivEl.className = "individual-book-container";
-
     // get booklist div
     var bookDivEl = document.createElement("div");
     bookDivEl.id = "book-list";
-    bookDivEl.className = "uk-grid";
+    bookDivEl.className = "uk-grid";  
 
     // get book cover div
     var thumbnailDivEl = document.createElement("div");
@@ -45,14 +43,13 @@ var displaySearchResults = function (data) {
     var thumbnailEl = document.createElement("img");
     thumbnailEl.id = "book-cover-img";
     thumbnailEl.setAttribute("src", book.volumeInfo.imageLinks.thumbnail);
-   // console.log("thumbnail ", book.volumeInfo.thumbnail);
     thumbnailEl.setAttribute("alt", "cover photo of book");
     thumbnailDivEl.appendChild(thumbnailEl);
-
+      
     // get book div
     var bookInfoEl = document.createElement("div");
     bookInfoEl.className = "uk-width-expand@m";
-
+ 
     // h4 inside of book div
     var getBookTitle = book.volumeInfo.title;
 
