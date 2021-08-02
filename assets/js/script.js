@@ -103,3 +103,12 @@ var displaySearchResults = function (data) {
     mainContainer.appendChild(individualBookContainerDivEl);
   }
 };
+
+/* Capture key board event for ENTER and call Search City function */
+document.getElementById("search-bar").onkeypress = function (e) {
+    if (!e) e = window.event;
+    if (e.key === "Enter") {
+        fetchBooks();
+      return false;
+    }
+  };
