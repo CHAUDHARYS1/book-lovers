@@ -76,6 +76,7 @@ var displaySearchResults = function (data) {
     // <a> for Learn more inside of book div
     var learnMoreEl = document.createElement("a");
     learnMoreEl.id = "learn-more";
+    learnMoreEl.setAttribute("target", "_blank");
     learnMoreEl.setAttribute("href", "./book-page.html?vol_id=" + book.id);
     learnMoreEl.innerHTML = "Learn more....";
 

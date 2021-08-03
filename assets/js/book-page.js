@@ -11,6 +11,7 @@ var fetchBookDetails = function (volumeId) {
         })
         .then(function(data){
             console.log(data);
+            document.title = data.volumeInfo.title;
             populateBookDetails(data);
         })
         .catch((error) => {
@@ -20,10 +21,14 @@ var fetchBookDetails = function (volumeId) {
 }
 
 // this function .....
-var populateBookDetails = function(data){
+var populateBookDetails = function(data){ 
 
     var titleEl = document.querySelector("#book-title");
     titleEl.textContent = data.volumeInfo.title;
+
+    var subTitleEl = document.querySelector("#sub-title");
+    subTitleEl.textContent = data.volumeInfo.subtitle;
+    
 
     var authorName = document.querySelector("#author-name");
     authorName.textContent = data.volumeInfo.authors[0];
@@ -71,21 +76,6 @@ else {
     loadErrorPage();
 }
 
-
-
-
-
-
-
-// var fetchBookDetails = function () {
-//     var requestOptions = {
-//         method: 'GET',
-//         redirect: 'follow'
-//       };
-      
-//       fetch("https://www.googleapis.com/books/v1/volumes/3YUrtAEACAAJ", requestOptions)
-//         .then(response => response.text())
-//         .then(result => console.log(result))
-//         .catch(error => console.log('error', error));
-// }
+var backBtnEl = document.querySelector("#back-btn");
+backBtnEl.addEventListener("click",fetchBooks(searchInput));
 
