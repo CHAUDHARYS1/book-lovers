@@ -4,18 +4,15 @@
 }
 
 body {
-  background-image: url("../images/bg-4.jpg");
+  /* background-image: url("../images/sakura.png"); */
   background-position: center;
   background-size: cover;
-  height: 1000px;
-  background-repeat: no-repeat;
+  /* height: 200px;  */
+  background-repeat:repeat;
 }
 
-/* header {
-  margin-top: 50px;
-} */
 p, a{
-  font-size: 12px;
+  font-size: 14px;
 }
 
 a{
@@ -35,7 +32,7 @@ a{
 
 /* ui Kit force css */
 h1,h2, h3, h4, h5, h6{
-  font-weight:300!important;
+  font-weight:bold!important;
   }
   h1,h2, h3, h4, h5, h6, p, a{
     color: #666!important;
@@ -45,18 +42,21 @@ h1,h2, h3, h4, h5, h6{
   }
 
   .individual-book-container {
-    background-color: white;
+    background-color: black;
+    color: black;
     opacity: 0.8;
-    padding: 10px;
+    padding: 5px;
   }
-
   #search-bar {
     color: #ec3b50;
   }
-
-  .book-info-container {
+ .main-container{
+   background-color: white;
+   color: white;
+ }
+.book-info-container {
     background-color:  black;
-    color: black;
+    color: white;
     opacity: 0.8;
     padding: 10px;
   }

@@ -16,6 +16,7 @@ var fetchBooks = function (searchInput) {
 // function to populate search results page in main-container
 var displaySearchResults = function (data) {
   var mainContainer = document.querySelector("#main-container");
+  mainContainer.classList.add("main-container");
   mainContainer.innerHTML = " ";
   var pageLimt = 10;
   for (var index = 0; index < pageLimt; index++) {
