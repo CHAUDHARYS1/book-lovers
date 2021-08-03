@@ -24,22 +24,18 @@
                 <div class="uk-margin">
                     <input class="uk-input" id="search-bar" type="text"
                         placeholder="Search your favorite books here...">
-                    <button class="uk-button uk-button-default" id="search-btn" type="button">
+                    <button class="uk-button uk-button-default uk-button-primary" id="search-btn" type="button">
                         Search <span class="uk-margin-small-right" uk-icon="search"></span>
                     </button>
                 </div>
             </fieldset>
         </form>
     </header>
+
     <!-- List of books based on keyword searched -->
     <main class="uk-container uk-margin-medium-top" id="main-container">
-        <!-- uses displayLists () -->
+        <!-- uses displaySearchResults() -->
     </main>
-
-    <!-- Shital used button to test out the js, feel free to delete it -->
-    <div class="uk-container">
-        <button onclick="displayLists()">Click</button>
-    </div>
 
     <!-- UIkit JS -->
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.7.1/dist/js/uikit.min.js"></script>
