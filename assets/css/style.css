@@ -36,9 +36,7 @@ a{
 #logo{
   padding-top: 20px;
 }
-white_check_mark
-eyes
-raised_hands
+
 /* ui Kit force css */
 h1,h2, h3, h4, h5, h6{
   font-weight:300!important;
@@ -78,8 +76,10 @@ h1,h2, h3, h4, h5, h6{
 }
 
 /* Error Page */
-#errorMessage {
+.message {
   color: #ec3b50!important;
+  font-size: 50px;
+  font-weight: bold;
 }
 #home-btn {
   background-color: #EC3B50 ;

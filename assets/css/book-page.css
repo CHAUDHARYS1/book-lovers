@@ -4,10 +4,10 @@
 }
   
 body {
-    background-image: url("../images/bg-4.jpg");
+    /* background-image: url("../images/bg-4.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100vh;
+    height: 100vh; */
 }
 
 #bookmark-img:hover {
