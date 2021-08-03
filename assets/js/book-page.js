@@ -1,3 +1,9 @@
+// check if bookmarked array already exists, if not, create one with an empty array
+var bookmarkedBooks = JSON.parse(localStorage.getItem("bookmarkedBooks"));
+if (!bookmarkedBooks) {
+    localStorage.setItem("bookmarkedBooks", JSON.stringify([]))
+}
+
 // this function .....
 var fetchBookDetails = function (volumeId) {
     var requestOptions = {
@@ -28,14 +34,12 @@ var populateBookDetails = function(data){
 
     var subTitleEl = document.querySelector("#sub-title");
     subTitleEl.textContent = data.volumeInfo.subtitle;
-    
 
     var authorName = document.querySelector("#author-name");
     authorName.textContent = data.volumeInfo.authors[0];
 
     var descriptionEl = document.querySelector("#book-descripton");
     descriptionEl.innerHTML = data.volumeInfo.description;
-
     
     var dateEl = document.querySelector("#publish-year");
     dateEl.textContent = data.volumeInfo.publishedDate;
@@ -71,11 +75,50 @@ const volumeId = urlParams.get('vol_id');
 // if it has a volume id, fetchBookDetails with that volume id
 if(volumeId){
     fetchBookDetails(volumeId);
+
+    // set bookmark icon on load
+    var bookmarkedImgEl = document.querySelector("#bookmark-img");
+    bookmarkedImgEl.setAttribute("src", "./assets/images/unbookmarked_1.png");
+
+    var bookmarkedBooks = JSON.parse(localStorage.getItem("bookmarkedBooks"));
+    for (var i = 0; i < bookmarkedBooks.length; i++){
+        // if volume id is already in the arr, set the correct icon
+        if (bookmarkedBooks[i].volumeId == volumeId) {
+            bookmarkedImgEl.setAttribute("src", "./assets/images/bookmarked.png");
+            break;
+        }
+    }
 }
 else {
     loadErrorPage();
 }
 
-var backBtnEl = document.querySelector("#back-btn");
-backBtnEl.addEventListener("click",fetchBooks(searchInput));
+$("#bookmark-img").on("click", function (e) {
+    var bookmarkedImgEl = document.querySelector("#bookmark-img");
+    var title = document.getElementById("book-title").textContent
+    var newBookmarked = true;
+    
+    var bookmarkedBooks = JSON.parse(localStorage.getItem("bookmarkedBooks"));
+    for (var i = 0; i < bookmarkedBooks.length; i++){
 
+        // if we clicked on the icon and it was already in the list, then we want to unbookmark
+        if (bookmarkedBooks[i].volumeId == volumeId) {
+            bookmarkedImgEl.setAttribute("src", "./assets/images/unbookmarked_1.png");
+            bookmarkedBooks.splice(i, 1); // remove from bookmarked array
+            UIkit.notification({message: title + " is removed from bookmarks!"})
+            newBookmarked = false;
+            break;
+        }
+    }
+
+    if(newBookmarked) {
+        bookmarkedImgEl.setAttribute("src", "./assets/images/bookmarked.png");
+        bookmarkedBooks.push({
+            "name" : title,
+            "volumeId" : volumeId
+        })
+        UIkit.notification({message: title + " is added to bookmarks!"})
+    }
+    
+    localStorage.setItem("bookmarkedBooks", JSON.stringify(bookmarkedBooks))
+  });
