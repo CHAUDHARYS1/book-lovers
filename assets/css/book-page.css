@@ -1,0 +1,39 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+  
+body {
+    background-image: url("../images/bg-4.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+#bookmark-img:hover {
+    cursor: pointer;
+}
+
+.red-label {
+    color: #EC3B50;
+}
+
+.book-info-container {
+    padding: 60px 60px;
+    color: white;
+    background-color: black;
+    opacity: 0.85;
+}
+
+#author-name {
+    color: #EC3B50;
+    font-weight: bold;
+}
+
+#book-title, #sub-title {
+    color: white;
+}
+
+#thumbnail-img {
+    width: 200px;
+}
