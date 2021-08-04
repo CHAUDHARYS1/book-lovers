@@ -37,3 +37,17 @@ p, a{
 #thumbnail-img {
     width: 200px;
 }
+
+
+.footer-content{
+    padding: 15px; 
+  }
+  
+  @media screen and (max-width: 650px) {
+  .footer-content{
+    padding: 0px!important; 
+  
+  }
+
+  
+  }
