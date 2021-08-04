@@ -5,7 +5,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <link rel="icon" href="assets/images/favi.png" type="image/gif" sizes="16x16">
+    <title>Book Lovers</title>
     <!-- UIkit CSS -->
     <link rel="stylesheet" href="assets/css/book-page.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.7.1/dist/css/uikit.min.css" />
@@ -15,13 +16,15 @@
     <header class="uk-container">
         <!-- Icon Button link to home page -->
         <div id="logo">
-           <a href="index.html"> <img src="assets/images/logo.png" alt="Logo" srcset=""></a>
+            <a href="index.html">
+                <img src="assets/images/logo.png" alt="Logo" srcset="">
+            </a>
         </div>
     </header>
     <!-- Display Selected Book Information -->
     <section class="uk-container uk-margin-medium-top book-info-container">
-        <!-- bookmark img  -->
-        <img id="bookmark-img" class="uk-float-right">
+        <!-- bookmark Icon -->
+        <span class="uk-float-right" uk-icon="icon: bookmark; ratio: 2"></span>
         <div uk-grid>
             <!-- Cover photo of book -->
             <div class="uk-width-auto@m">
@@ -47,6 +50,24 @@
         </div>
     </section>
 
+     <!-- Footer -->
+     <footer class="uk-container">
+        <div class="uk-flex">
+            <div class="uk-margin-left uk-padding-small">
+                <p>Built with love by the <span
+                        uk-tooltip="Connor Werth, Jaya Gudipalli, Mehak Rizvi, Shital Chaudhary"><u>team</u></span> |
+                    2021</p>
+            </div>
+            <div class="uk-margin-left uk-padding-small">
+                <p><a href="https://github.com/CHAUDHARYS1/book-lovers" target="_blank"></span><u>See code in
+                            GitHub</u></a> <span uk-icon="github"></span></p>
+            </div>
+            <div class="uk-margin-left uk-padding-small">
+                <p>Book Lovers Web App <span uk-icon="happy"></span></p> </span>
+            </div>
+        </div>
+    </footer>
+    
     <!-- UIkit JS -->
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.7.1/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.7.1/dist/js/uikit-icons.min.js"></script>

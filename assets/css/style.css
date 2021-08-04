@@ -2,14 +2,6 @@
   padding: 0;
   margin: 0;
 }
-
-/* body {
-  background-image: url("../images/topography.png");
-  background-size: auto, cover;
-  background-repeat: repeat;
-  height: 100vh;
-} */
-
 p, a{
   font-size: 14px;
 }
@@ -33,9 +25,7 @@ a{
 #logo{
   padding-top: 20px;
 }
-white_check_mark
-eyes
-raised_hands
+
 /* ui Kit force css */
 h1,h2, h3, h4, h5, h6{
   font-weight:bold!important;
@@ -74,10 +64,28 @@ h1,h2, h3, h4, h5, h6{
 }
 
 /* Error Page */
-#errorMessage {
+.message {
   color: #ec3b50!important;
+  font-size: 50px;
+  font-weight: bold;
 }
 #home-btn {
   background-color: #EC3B50 ;
   color: white!important;
+}
+
+.uk-white{
+  color: white!important;
+}
+
+/* Favorite Books Component CSS */
+#my-favbooks-btn{
+  transition: all .5s ease;
+}
+#my-favbooks-btn:hover{
+  background-color: #ec3b50;
+  color: white;
+}
+.favbooks-container div:hover{
+ opacity: .8;
 }
