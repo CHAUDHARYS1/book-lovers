@@ -40,14 +40,13 @@
     <!-- Favorite books container -->
     <div id="offcanvas-flip" uk-offcanvas="flip: false; overlay: true;mode:push">
         <div class="uk-offcanvas-bar">
-            <button class="uk-offcanvas-close" type="button" uk-close></button>
+            <button class="uk-offcanvas-close" id="fav-books" type="button" uk-close></button>
             <h3 class="uk-white">Favorite Books <span class="uk-margin-small-right" uk-icon="heart"></span></h3>
             <button class="uk-offcanvas-close" type="button" uk-close></button>
             <!-- repeat container -->
             <a href="#" class="uk-margin-remove-top uk-link-reset favbooks-container">
-                <div class="uk-card uk-card-hover uk-card-default uk-card-body uk-padding-small uk-margin-small-bottom">
-                    <p class="uk-text-default uk-margin-remove-vertical" id="title-of-book">Title of the book</p>
-                </div>
+                <div id="fav-books-container" class="uk-card uk-card-hover uk-card-default uk-card-body uk-padding-small uk-margin-small-bottom">
+                          </div>
             </a>
         </div>
     </div>

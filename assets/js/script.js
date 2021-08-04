@@ -1,3 +1,5 @@
+
+
 var fetchBooks = function (searchInput) {
   var apiUrl = "https://www.googleapis.com/books/v1/volumes?q=" + searchInput;
   console.log("search input", searchInput);
@@ -36,7 +38,10 @@ var displaySearchResults = function (data) {
     // get book cover img
     var thumbnailEl = document.createElement("img");
     thumbnailEl.id = "book-cover-img";
-    thumbnailEl.setAttribute("src", book.volumeInfo.imageLinks?.thumbnail || "./assets/images/thumbnail.png");
+    thumbnailEl.setAttribute(
+      "src",
+      book.volumeInfo.imageLinks?.thumbnail || "./assets/images/thumbnail.png"
+    );
     thumbnailEl.setAttribute("alt", "cover photo of book");
     thumbnailDivEl.appendChild(thumbnailEl);
 
@@ -45,7 +50,8 @@ var displaySearchResults = function (data) {
     bookInfoEl.className = "uk-width-expand@m";
 
     // h4 inside of book div
-    var getBookTitle = book.volumeInfo?.title || "No Title provided for this book";
+    var getBookTitle =
+      book.volumeInfo?.title || "No Title provided for this book";
 
     var bookTitleEl = document.createElement("h4");
     bookTitleEl.id = "book-title";
@@ -54,7 +60,8 @@ var displaySearchResults = function (data) {
     bookTitleEl.innerHTML = getBookTitle;
 
     // <p> for author name inside of book div
-    var getAuthorName = book.volumeInfo?.authors[0] ||  "No Author Name found for this book";
+    var getAuthorName =
+      book.volumeInfo?.authors[0] || "No Author Name found for this book";
     var authorNameEl = document.createElement("p");
     authorNameEl.id = "author-name";
     authorNameEl.classList = "uk-margin-remove-top";
@@ -68,7 +75,8 @@ var displaySearchResults = function (data) {
     descriptionWordEl.innerHTML = "Description:";
 
     // <p> for description for book inside of book div
-    var getDescription = book.volumeInfo?.description || "No description provided for this book";
+    var getDescription =
+      book.volumeInfo?.description || "No description provided for this book";
     var descriptionEl = document.createElement("p");
     descriptionEl.id = "book-description";
     descriptionEl.classList = "uk-margin-remove-top ch-limit-100";
@@ -79,6 +87,7 @@ var displaySearchResults = function (data) {
     learnMoreEl.id = "learn-more";
     learnMoreEl.setAttribute("target", "_blank");
     learnMoreEl.setAttribute("href", "./book-page.html?vol_id=" + book.id);
+ 
     learnMoreEl.innerHTML = "Learn more....";
 
     var dividerEl = document.createElement("hr");
@@ -105,6 +114,30 @@ $("#search-btn").on("click", function (e) {
   if (searchInput !== "") {
     fetchBooks(searchInput);
   }
+});
+
+/* On click of Favorite Books , user will see all books which are marked as favorite */
+$("#my-favbooks-btn").on("click", function (e) {
+  var retreiveBooks = JSON.parse(localStorage.getItem("bookmarkedBooks"));
+  var favBooksDiv = document.querySelector("#fav-books-container");
+  favBooksDiv.innerHTML = " ";
+  var bookId;
+
+  for (var index = retreiveBooks.length - 1; index >= 0; index--) {
+    /* create a paragraph element to store the title */
+    var title = document.createElement("p");
+    title.textContent = retreiveBooks[index].name;
+    bookId = retreiveBooks[index].volumeId;
+
+    /* create an anchor tag so the link will be routed to the book detail page */
+    var titleRef = document.createElement("a");
+    titleRef.setAttribute("target", "_blank");
+    titleRef.setAttribute("href", "./book-page.html?vol_id=" + bookId);
+    titleRef.appendChild(title);
+  
+    favBooksDiv.appendChild(titleRef);
+  }
+
 });
 
 /* fetch books when the user pressed enter in the search bar */
