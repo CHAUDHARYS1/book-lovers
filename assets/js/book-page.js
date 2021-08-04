@@ -78,13 +78,13 @@ if(volumeId){
 
     // set bookmark icon on load
     var bookmarkedImgEl = document.querySelector("#bookmark-img");
-    bookmarkedImgEl.setAttribute("src", "./assets/images/unbookmarked_1.png");
 
     var bookmarkedBooks = JSON.parse(localStorage.getItem("bookmarkedBooks"));
     for (var i = 0; i < bookmarkedBooks.length; i++){
         // if volume id is already in the arr, set the correct icon
         if (bookmarkedBooks[i].volumeId == volumeId) {
-            bookmarkedImgEl.setAttribute("src", "./assets/images/bookmarked.png");
+            bookmarkedImgEl.classList.remove("uk-icon-unbookmarked");
+            bookmarkedImgEl.classList.add("uk-icon-bookmarked");
             break;
         }
     }
@@ -103,8 +103,15 @@ $("#bookmark-img").on("click", function (e) {
 
         // if we clicked on the icon and it was already in the list, then we want to unbookmark
         if (bookmarkedBooks[i].volumeId == volumeId) {
-            bookmarkedImgEl.setAttribute("src", "./assets/images/unbookmarked_1.png");
-            bookmarkedBooks.splice(i, 1); // remove from bookmarked array
+            
+            // set the correct bookmark color
+            bookmarkedImgEl.classList.add("uk-icon-unbookmarked");
+            bookmarkedImgEl.classList.remove("uk-icon-bookmarked");
+
+            // remove from bookmarked array
+            bookmarkedBooks.splice(i, 1); 
+
+            // notifiy user of removal of bookmark
             UIkit.notification({message: title + " is removed from bookmarks!"})
             newBookmarked = false;
             break;
@@ -112,7 +119,9 @@ $("#bookmark-img").on("click", function (e) {
     }
 
     if(newBookmarked) {
-        bookmarkedImgEl.setAttribute("src", "./assets/images/bookmarked.png");
+        // bookmarkedImgEl.setAttribute("src", "./assets/images/bookmarked.png");
+        bookmarkedImgEl.classList.remove("uk-icon-unbookmarked");
+        bookmarkedImgEl.classList.add("uk-icon-bookmarked");
         bookmarkedBooks.push({
             "name" : title,
             "volumeId" : volumeId
