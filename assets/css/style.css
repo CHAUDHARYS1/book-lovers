@@ -2,17 +2,6 @@
   padding: 0;
   margin: 0;
 }
-
-/* body {
-  background-image: url("../images/topography.png");
-  background-size: auto, cover;
-  background-repeat: repeat;
-  height: 100vh;
-} */
-
-/* header {
-  margin-top: 50px;
-} */
 p, a{
   font-size: 12px;
 }
@@ -84,4 +73,20 @@ h1,h2, h3, h4, h5, h6{
 #home-btn {
   background-color: #EC3B50 ;
   color: white!important;
+}
+
+.uk-white{
+  color: white!important;
+}
+
+/* Favorite Books Component CSS */
+#my-favbooks-btn{
+  transition: all .5s ease;
+}
+#my-favbooks-btn:hover{
+  background-color: #ec3b50;
+  color: white;
+}
+.favbooks-container div:hover{
+ opacity: .8;
 }
