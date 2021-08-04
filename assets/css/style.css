@@ -3,7 +3,7 @@
   margin: 0;
 }
 p, a{
-  font-size: 12px;
+  font-size: 14px;
 }
 
 a{
@@ -18,7 +18,6 @@ a{
   background-color: #EC3B50 ;
   color: white;
   font-weight: bold;
-  margin-left: 20px;
   padding-left: 40px;
   font-size: 16px;
 }
@@ -28,7 +27,7 @@ a{
 
 /* ui Kit force css */
 h1,h2, h3, h4, h5, h6{
-  font-weight:300!important;
+  font-weight:bold!important;
   }
   h1,h2, h3, h4, h5, h6, p, a{
     color: #666!important;
@@ -41,7 +40,6 @@ h1,h2, h3, h4, h5, h6{
     /* background-color: white; */
     padding: 10px;
   }
-
   #search-bar {
     color: #ec3b50;
   }
@@ -89,4 +87,8 @@ h1,h2, h3, h4, h5, h6{
 }
 .favbooks-container div:hover{
  opacity: .8;
+}
+
+.footer-content{
+  padding: 15px; 
 }

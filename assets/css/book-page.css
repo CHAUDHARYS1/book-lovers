@@ -38,10 +38,23 @@ p, a{
     width: 200px;
 }
 
+
+.footer-content{
+    padding: 15px; 
+  }
+  
+  @media screen and (max-width: 650px) {
+  .footer-content{
+    padding: 0px!important; 
+  
+  }
+
+  
+  }
 .uk-icon-bookmarked[uk-icon="icon:bookmark; ratio:3"] svg polygon{
     fill: #EC3B50;
 }
 
-.uk-icon-unbookmarked[uk-icon="icon:bookmark; ratio:3"] svg polygon{
-    /* fill: yellow; */
-}
+/* .uk-icon-unbookmarked[uk-icon="icon:bookmark; ratio:3"] svg polygon{
+    fill: yellow; 
+} */
