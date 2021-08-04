@@ -37,3 +37,11 @@ p, a{
 #thumbnail-img {
     width: 200px;
 }
+
+.uk-icon-bookmarked[uk-icon="icon:bookmark; ratio:3"] svg polygon{
+    fill: #EC3B50;
+}
+
+.uk-icon-unbookmarked[uk-icon="icon:bookmark; ratio:3"] svg polygon{
+    /* fill: yellow; */
+}
