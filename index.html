@@ -15,13 +15,17 @@
     <header class="uk-container">
         <!-- Icon Button link to home page -->
         <div id="logo">
-            <img src="assets/images/logo.png" alt="Logo" srcset="">
+            <a href="index.html">
+                <img src="assets/images/logo.png" alt="Logo" srcset="">
+            </a>
         </div>
         <br>
         <!-- Search Bar -->
         <form id="searchBarDiv1">
             <fieldset class="uk-fieldset">
                 <div class="uk-margin">
+                    <button class="uk-button uk-button-default" id="my-favbooks-btn" type="button"
+                        uk-toggle="target: #offcanvas-flip">My favorite books</button>
                     <input class="uk-input" id="search-bar" type="text"
                         placeholder="Search your favorite books here...">
                     <button class="uk-button uk-button-default uk-button-primary" id="search-btn" type="button">
@@ -32,10 +36,44 @@
         </form>
     </header>
 
+    <!-- Favorite books container -->
+    <div id="offcanvas-flip" uk-offcanvas="flip: false; overlay: true;mode:push">
+        <div class="uk-offcanvas-bar">
+            <button class="uk-offcanvas-close" type="button" uk-close></button>
+            <h3 class="uk-white">Favorite Books <span class="uk-margin-small-right" uk-icon="heart"></span></h3>
+            <button class="uk-offcanvas-close" type="button" uk-close></button>
+            <!-- repeat container -->
+            <a href="#" class="uk-margin-remove-top uk-link-reset favbooks-container">
+                <div class="uk-card uk-card-hover uk-card-default uk-card-body uk-padding-small uk-margin-small-bottom">
+                    <p class="uk-text-default uk-margin-remove-vertical" id="title-of-book">Title of the book</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
     <!-- List of books based on keyword searched -->
     <main class="uk-container uk-margin-medium-top" id="main-container">
         <!-- uses displaySearchResults() -->
     </main>
+
+    <!-- Footer -->
+    <footer class="uk-container">
+        <div class="uk-flex">
+            <div class="uk-margin-left uk-padding-small">
+                <p>Built with love by the <span
+                        uk-tooltip="Connor Werth, Jaya Gudipalli, Mehak Rizvi, Shital Chaudhary"><u>team</u></span> |
+                    2021</p>
+            </div>
+            <div class="uk-margin-left uk-padding-small">
+                <p><a href="https://github.com/CHAUDHARYS1/book-lovers" target="_blank"></span><u>See code in
+                            GitHub</u></a> <span uk-icon="github"></span></p>
+            </div>
+            <div class="uk-margin-left uk-padding-small">
+                <p>Book Lovers Web App <span uk-icon="happy"></span></p> </span>
+            </div>
+        </div>
+    </footer>
+
 
     <!-- UIkit JS -->
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.7.1/dist/js/uikit.min.js"></script>

@@ -2,18 +2,6 @@
   padding: 0;
   margin: 0;
 }
-
-body {
-  background-image: url("../images/bg-4.jpg");
-  background-position: center;
-  background-size: cover;
-  height: 1000px;
-  background-repeat: no-repeat;
-}
-
-/* header {
-  margin-top: 50px;
-} */
 p, a{
   font-size: 12px;
 }
@@ -26,11 +14,16 @@ a{
   width: 40%;
 }
 #search-btn {
-  position: absolute;
-  background-color: #ec3b50 ;
+  position: relative;
+  background-color: #EC3B50 ;
   color: white;
   font-weight: bold;
   margin-left: 20px;
+  padding-left: 40px;
+  font-size: 16px;
+}
+#logo{
+  padding-top: 20px;
 }
 
 /* ui Kit force css */
@@ -45,8 +38,7 @@ h1,h2, h3, h4, h5, h6{
   }
 
   .individual-book-container {
-    background-color: white;
-    opacity: 0.8;
+    /* background-color: white; */
     padding: 10px;
   }
 
@@ -55,10 +47,13 @@ h1,h2, h3, h4, h5, h6{
   }
 
   .book-info-container {
-    background-color:  black;
-    color: black;
-    opacity: 0.8;
-    padding: 10px;
+    background-color: #ec3b50;
+    padding: 20px 5px 5px 5px;
+    border-radius: 20px;
+    color: white!important;
+  }
+  .book-info-container p, h2{
+    color: white!important;
   }
 .ch-limit-100 {
   width: 200ch;
@@ -67,4 +62,31 @@ h1,h2, h3, h4, h5, h6{
   text-overflow: ellipsis;
   word-wrap: break-word;
   max-width: 85%;
+}
+
+/* Error Page */
+.message {
+  color: #ec3b50!important;
+  font-size: 50px;
+  font-weight: bold;
+}
+#home-btn {
+  background-color: #EC3B50 ;
+  color: white!important;
+}
+
+.uk-white{
+  color: white!important;
+}
+
+/* Favorite Books Component CSS */
+#my-favbooks-btn{
+  transition: all .5s ease;
+}
+#my-favbooks-btn:hover{
+  background-color: #ec3b50;
+  color: white;
+}
+.favbooks-container div:hover{
+ opacity: .8;
 }

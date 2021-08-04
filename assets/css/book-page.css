@@ -1,0 +1,36 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#logo{
+    padding-top: 20px;
+  }
+  
+#bookmark-img:hover {
+    cursor: pointer;
+}
+
+.red-label {
+    color: #EC3B50;
+}
+
+.book-info-container {
+    padding: 30px 30px;
+    color: white;
+    background-color: #222;
+    opacity: 0.85;
+}
+
+#author-name {
+    color: #EC3B50;
+    font-weight: bold;
+}
+
+#book-title, #sub-title {
+    color: white;
+}
+
+#thumbnail-img {
+    width: 200px;
+}
