@@ -34,6 +34,7 @@ var displaySearchResults = function (data) {
     var thumbnailDivEl = document.createElement("div");
     thumbnailDivEl.className = "uk-width-auto";
 
+    
     // get book cover img
     var thumbnailEl = document.createElement("img");
     thumbnailEl.id = "book-cover-img";
