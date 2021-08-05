@@ -50,15 +50,11 @@ var populateBookDetails = function(data){
     var isbnEl = document.querySelector("#isbn-number");
     isbnEl.textContent = data.volumeInfo.industryIdentifiers[0].identifier;
 
-    var ratingContainer = document.querySelector(".rating-container");
     var rating = parseInt(data.volumeInfo.averageRating);
-    for(var i = 1; i < rating; i++) {
+    for(var i = 0; i < rating; i++) {
 
-        var imgEl = document.createElement("img");
-        imgEl.className = "rating-img";
-        imgEl.src = "./assets/images/icons8-star-30.png";
-
-        ratingContainer.appendChild(imgEl);        
+        var ratingStarEl = document.querySelector("#rating-star-" +i);
+        ratingStarEl.classList.add("uk-icon-rating");       
     }
 
 }

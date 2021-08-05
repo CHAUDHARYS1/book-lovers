@@ -5,7 +5,7 @@ https://chaudharys1.github.io/book-lovers/
 
 ## Description
 
-Book Lovers is a web application that lets users search for a book based on author, title, subject, and genre. Books will be displayed based on their unique ISBN. LocalStorage will be used to store data of most recently searches and be displayed for the user to quickly navigate. 
+Book Lovers is a web application that lets users search for a book based on title. Books will be displayed based on their unique volume Id. LocalStorage will be used to store user's favorite books.
 
 ## Collaborators
 
@@ -19,8 +19,8 @@ Book Lovers is a web application that lets users search for a book based on auth
 
 ```
 AS A student,
-I WANT to search for a book by the title, subject or author 
-SO THAT I can view the books and check if they're available on Google.
+I WANT to search for a book by the title 
+SO THAT I can find information on the book and bookmark it to favorites
 ```
 
 ## Acceptance Criteria
