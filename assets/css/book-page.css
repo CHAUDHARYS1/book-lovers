@@ -1,0 +1,64 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+p, a{
+    font-size: 12px;
+  }
+  
+#logo{
+    padding-top: 20px;
+  }
+  
+#bookmark-img:hover {
+    cursor: pointer;
+}
+
+.red-label {
+    color: #EC3B50;
+}
+
+.book-info-container {
+    padding: 30px 30px;
+    color: white;
+    background-color: #222;
+    opacity: 0.85;
+}
+
+#author-name {
+    color: #EC3B50;
+    font-weight: bold;
+}
+
+#book-title, #sub-title {
+    color: white;
+}
+
+#thumbnail-img {
+    width: 200px;
+}
+
+
+.footer-content{
+    padding: 15px; 
+  }
+  
+  @media screen and (max-width: 650px) {
+  .footer-content{
+    padding: 0px!important; 
+  
+  }
+
+  
+  }
+.uk-icon-bookmarked[uk-icon="icon:bookmark; ratio:3"] svg polygon{
+    fill: #EC3B50;
+}
+
+/* .uk-icon-unbookmarked[uk-icon="icon:bookmark; ratio:3"] svg polygon{
+    fill: yellow; 
+} */
+
+.uk-icon-rating[uk-icon="icon:star; ratio:1"] svg polygon{
+    fill: white;
+}
