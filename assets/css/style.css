@@ -3,7 +3,7 @@
   margin: 0;
 }
 p, a{
-  font-size: 12px;
+  font-size: 14px;
 }
 
 a{
@@ -27,7 +27,7 @@ a{
 
 /* ui Kit force css */
 h1,h2, h3, h4, h5, h6{
-  font-weight:300!important;
+  font-weight:bold!important;
   }
   h1,h2, h3, h4, h5, h6, p, a{
     color: #666!important;
@@ -40,7 +40,6 @@ h1,h2, h3, h4, h5, h6{
     /* background-color: white; */
     padding: 10px;
   }
-
   #search-bar {
     color: #ec3b50;
   }
@@ -86,8 +85,16 @@ h1,h2, h3, h4, h5, h6{
   background-color: #ec3b50;
   color: white;
 }
-.favbooks-container div:hover{
- opacity: .8;
+.book-title {
+  width: 200px;
+  max-height: 100px;
+  margin: 0;
+  border-radius: 5px;
+  font-size: 20px;
+  background-color: #ec3b50;
+  color: white!important;
+  margin-bottom: 10px;
+  padding: 10px;
 }
 
 .footer-content{

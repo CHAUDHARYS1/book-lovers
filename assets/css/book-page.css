@@ -55,6 +55,10 @@ p, a{
     fill: #EC3B50;
 }
 
-.uk-icon-unbookmarked[uk-icon="icon:bookmark; ratio:3"] svg polygon{
-    /* fill: yellow; */
+/* .uk-icon-unbookmarked[uk-icon="icon:bookmark; ratio:3"] svg polygon{
+    fill: yellow; 
+} */
+
+.uk-icon-rating[uk-icon="icon:star; ratio:1"] svg polygon{
+    fill: white;
 }
