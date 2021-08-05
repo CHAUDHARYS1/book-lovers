@@ -1,5 +1,3 @@
-
-
 var fetchBooks = function (searchInput) {
   var apiUrl = "https://www.googleapis.com/books/v1/volumes?q=" + searchInput;
   console.log("search input", searchInput);
@@ -87,7 +85,7 @@ var displaySearchResults = function (data) {
     learnMoreEl.id = "learn-more";
     learnMoreEl.setAttribute("target", "_blank");
     learnMoreEl.setAttribute("href", "./book-page.html?vol_id=" + book.id);
- 
+
     learnMoreEl.innerHTML = "Learn more....";
 
     var dividerEl = document.createElement("hr");
@@ -123,9 +121,10 @@ $("#my-favbooks-btn").on("click", function (e) {
   favBooksDiv.innerHTML = " ";
   var bookId;
 
-  for (var index = retreiveBooks.length - 1; index >= 0; index--) {
+  for (var index = 0; index < retreiveBooks.length; index++) {
     /* create a paragraph element to store the title */
     var title = document.createElement("p");
+    title.classList.add("book-title");
     title.textContent = retreiveBooks[index].name;
     bookId = retreiveBooks[index].volumeId;
 
@@ -134,10 +133,9 @@ $("#my-favbooks-btn").on("click", function (e) {
     titleRef.setAttribute("target", "_blank");
     titleRef.setAttribute("href", "./book-page.html?vol_id=" + bookId);
     titleRef.appendChild(title);
-  
+
     favBooksDiv.appendChild(titleRef);
   }
-
 });
 
 /* fetch books when the user pressed enter in the search bar */
