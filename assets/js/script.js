@@ -23,6 +23,7 @@ var displaySearchResults = function (data) {
   var pageLimt = 10;
   for (var index = 0; index < pageLimt; index++) {
     var book = data.items[index];
+    console.log(index);
 
     var individualBookContainerDivEl = document.createElement("div");
     individualBookContainerDivEl.className = "individual-book-container";
