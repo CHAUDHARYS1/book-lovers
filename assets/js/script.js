@@ -85,8 +85,7 @@ var displaySearchResults = function (data) {
     var learnMoreEl = document.createElement("a");
     learnMoreEl.id = "learn-more";
     learnMoreEl.setAttribute("target", "_blank");
-    learnMoreEl.setAttribute("href", "./book-page.html?vol_id=" + book.id);
-
+    learnMoreEl.setAttribute("href", "./book-page.html?vol_id=" + book.id);    
     learnMoreEl.innerHTML = "Learn more....";
 
     var dividerEl = document.createElement("hr");
