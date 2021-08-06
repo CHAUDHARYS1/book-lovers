@@ -60,8 +60,13 @@ var displaySearchResults = function (data) {
     bookTitleEl.innerHTML = getBookTitle;
 
     // <p> for author name inside of book div
-    var getAuthorName =
-      book.volumeInfo?.authors[0] || "No Author Name found for this book";
+    var authorsArr = book.volumeInfo.authors;
+    var getAuthorName = "(Unknown Author)"
+    if (authorsArr) {
+        var getAuthorName =
+        book.volumeInfo?.authors[0] || "(Unknown Author)";
+    }
+    
     var authorNameEl = document.createElement("p");
     authorNameEl.id = "author-name";
     authorNameEl.classList = "uk-margin-remove-top";
