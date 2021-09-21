@@ -65,30 +65,33 @@ https://chaudharys1.github.io/book-lovers/
 
 ```
 AS A student,
-I WANT to search for a book by the title, subject or author 
-SO THAT I can view the books and check if they're available on Google.
+I WANT to search for a book by the title 
+SO THAT I can find information on the book and bookmark it to favorites
 ```
 
 ```
-GIVEN a book dashboard with form inputs
+GIVEN a search dashboard
 
 WHEN I load the page
-THEN I am presented with the UI that resembles with the mockup
+THEN I am presented with the home page with search bar for books and favorite book button on the left
 
 WHEN I search for a book
 THEN I am presented with series of search results
 
-WHEN I view a search card
-THEN I am presented with the book title, cover, author, ISBN and published year and a link to view your book in Google/Amazon.
+WHEN I view a list of search results
+THEN I am presented with the book title, cover, author, some description about the book and learmore link.
 
-WHEN I click on the Google/Amazon link
-THEN I am presented with the book in Google/Amazon in a new tab
+WHEN I click on the learnmore link
+THEN I am presented with the book details with title, sub-title, isbn, published date, rating stars and bookmark icon to mark the book favorite
 
-WHEN I search for a book
-THEN the book is saved in the search history
+WHEN I click the bookmark icon
+THEN the book is saved in the local storage and user can view it in the favorite section on the home page
 
-WHEN I click on the book in search history
-THEN I am again presented with the same search results
+WHEN I click on the favorite books button on the home page
+THEN I can view the list of my favorite books 
+
+WHEN I click on a title of the favorite book
+THEN I'm redirected to the book details page
 ```
 
 <!-- ROADMAP -->
