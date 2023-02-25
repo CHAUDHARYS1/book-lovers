@@ -13,7 +13,7 @@
     <a href="https://github.com/CHAUDHARYS1/book-lovers"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/CHAUDHARYS1/book-lovers">View Demo</a>
+    <a href="https://chaudharys1.github.io/book-lovers/">View Demo</a>
     ·
     <a href="https://github.com/CHAUDHARYS1/book-lovers/issues">Report Bug</a>
     ·
